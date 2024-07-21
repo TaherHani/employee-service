@@ -61,6 +61,7 @@ public class EmployeeRepository {
         }
     }
 
+    @Synchronized
     public Long getNextId() throws IOException {
         File employeeFile = new File("counter.json");
 
