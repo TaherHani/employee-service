@@ -26,6 +26,7 @@ public class EmployeeRepository {
     @Synchronized
     public boolean writeEmployees(List<Employee> employees) {
 
+        // note : here we can use append to make execution faster but it needs more time for implementation to taking all cases into account
         try {
             objectMapper.writeValue(new File("database.json"), employees);
 
